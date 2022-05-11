@@ -3,8 +3,8 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <h1>Blackjack</h1>
-        <p id="message-el">Want to play a round?</p>
+        <h1>Blackjack <em>Express</em></h1>
+        <p id="message-el">Want to play a round? <em>Place yer Bet!</em></p>
         <p id="cards-el">Cards:</p>
         <p id="sum-el">Sum:</p>
         <button id="initialize-btn" onclick="startGame()">START GAME</button>
@@ -12,10 +12,15 @@
 
         <!-- <button onclick="score()">score test</button>      --- use this button to test the score function  -->
         
+        <div class="betDisplay">
+            <button class="bet-btn" id="decBet" onclick="decreaseBet()"><</button>
+                <p class="betAmt" id="bet-el"></p>
+            <button class="bet-btn" id="incBet" onclick="increaseBet()">></button>
 
+        </div>
 
         <!-- <button class="bet" id="incBet-btn" onclick="bet()">BET</button> -->
-        <button class="bet" id="bet-btn" onclick="bet()">BET</button>
+        <button class="bet" id="bet-btn" onclick="placeBet()">BET</button>
         <!-- <button  id="decBet-btn" onclick="bet()">BET</button> -->
 
         <p id="player-el"></p>

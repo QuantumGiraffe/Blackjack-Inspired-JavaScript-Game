@@ -31,9 +31,29 @@ button {
 
 .bet {
     display: block;
-    margin-left: 40.5%;
+    margin: 0 auto;
     margin-top: 4px;
+    /* margin-left: 40.5% */
 }
 
+.betDisplay{
+    display: flex;
+    justify-content: center;
+}
 
-/* need to make left and right, increase/decrease btns */
+.bet-btn{
+    margin: 10px 0;
+    max-width: 30px;
+    height: 30px;
+}
+
+.betAmt{
+    /* padding: 20px; */
+    margin: 10px 15px;
+    width: 30px;
+    height: 20px;
+    border-radius: 2px;
+    color: goldenrod;
+    border: 3px solid goldenrod;
+    background-color: white;
+}

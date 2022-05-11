@@ -6,7 +6,8 @@
 // Player Object
 let player = {
     name: "Player",
-    chips: 200
+    chips: 200,
+    bet: 10
 }
 
 // Variables
@@ -21,6 +22,7 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 let playerEl = document.getElementById("player-el")
+let betEl = document.getElementById("bet-el")
 
 // Buttons
 let initializeButton = document.getElementById("initialize-btn")
@@ -30,6 +32,17 @@ let hitButton = document.getElementById("hit-btn")
 // Functions
 function renderPlayer () {
 playerEl.textContent = player.name + ": $" + player.chips
+betEl.textContent = player.bet
+}
+
+function increaseBet(){
+    player.bet += 10
+    renderPlayer ()
+}
+
+function decreaseBet(){
+    player.bet -= 10
+    renderPlayer ()
 }
 
 // Want to render player info on the screen before the game starts 
@@ -46,6 +59,7 @@ function getRandomCard() {
         return randomNumber
     }
 }
+
 
 
 function startGame() {
@@ -98,12 +112,13 @@ function newCard() {
 }
 
 function score () {
+
     if (hasBlackJack===true) {
         // cardsEl.textContent = "CLICKED!"; used for testing if score button works
-        player['chips'] += 10
+        player['chips'] += player.bet
 
     } else if (isAlive===false) {
-        player['chips'] -= 10
+        player['chips'] -= player.bet
     }
 
         renderPlayer()
@@ -112,10 +127,23 @@ function score () {
 
 function endOfGame () {
     hitButton.innerHTML = `&larr;`
-    initializeButton.innerHTML =  `RESTART GAME`
+    initializeButton.innerHTML =  `RESET GAME`
     initializeButton.disabled = false;
     score()
 }
+
+// Once end of game is called and you hit reset, the game SHOULD not immediately start
+// Instead there should be a start button which is disabled, until you place your bet using the bet button 
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -133,6 +161,6 @@ function endOfGame () {
 
 
 
-function bet() {
+function placeBet() {
     cardsEl.textContent = "CLICKED!";
 }
