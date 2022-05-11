@@ -1,3 +1,6 @@
 # Blackjack Inspired JavaScript Game
  Blackjack-like game made using vanilla JS. This has been my favorite project to work on so far
- [BlackjackExpress](https://user-images.githubusercontent.com/99769547/167761010-2d5d2086-95f3-4e73-b3ac-1ae67300acf5.png)
+
+Click this link to see a screenshot of the game!
+![BlackjackExpressPicture](https://user-images.githubusercontent.com/99769547/167761344-7ab53be7-6ca3-4aa8-b46b-cc672a0b20a6.png)
+
