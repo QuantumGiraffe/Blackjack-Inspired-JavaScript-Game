@@ -8,20 +8,20 @@
         <p id="cards-el">Cards:</p>
         <p id="sum-el">Sum:</p>
         <button id="initialize-btn" onclick="startGame()">START GAME</button>
+        <!-- All this utton^^^ is doing is starting the game, we need to change that so it doesnt just jump in when you restart -->
         <button id="hit-btn" onclick="newCard()">HIT ME</button>
-
-        <!-- <button onclick="score()">score test</button>      --- use this button to test the score function  -->
         
         <div class="betDisplay">
+            
             <button class="bet-btn" id="decBet" onclick="decreaseBet()"><</button>
                 <p class="betAmt" id="bet-el"></p>
             <button class="bet-btn" id="incBet" onclick="increaseBet()">></button>
 
         </div>
 
-        <!-- <button class="bet" id="incBet-btn" onclick="bet()">BET</button> -->
+    
         <button class="bet" id="bet-btn" onclick="placeBet()">BET</button>
-        <!-- <button  id="decBet-btn" onclick="bet()">BET</button> -->
+        
 
         <p id="player-el"></p>
         <script src="index.js"></script>
